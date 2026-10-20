@@ -16,8 +16,7 @@ Then open http://localhost:8000.
 
 Content was migrated from the previous homepage in `Kaiyuechen.github.io`.
 The selected publication, 3WD-VLA, is accepted at EAI CollaborateCom 2026.
-The CV link is omitted because
-the previous site's configured `files/CV-Kaiyue-Chen.pdf` was not present.
+The CV button opens `assets/files/CV.pdf` in a new tab.
 
 Canonical and social-sharing URLs use the GitHub Pages user-site address:
 `https://kaiyuechen24.github.io/`.

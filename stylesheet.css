@@ -521,6 +521,7 @@ a {
 }
 
 .research-list p {
+  max-width: 78ch;
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
@@ -821,7 +822,7 @@ a {
   position: relative;
   display: grid;
   grid-template-columns: minmax(240px, 0.82fr) 42px minmax(0, 1.4fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
   column-gap: 1.5rem;
   margin-top: 0.25rem;
   padding-top: 0.25rem;
@@ -970,15 +971,14 @@ a {
 }
 
 .experience-list {
-  display: flex;
+  display: block;
   grid-column: 3;
   grid-row: 2;
-  flex-direction: column;
   min-width: 0;
 }
 
 .experience-entry {
-  flex: 1;
+  display: flow-root;
   min-height: 125px;
   padding: 1rem 0;
   border-bottom: 1px solid var(--line);
@@ -1051,6 +1051,87 @@ a {
   margin: 0.35rem 0 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.experience-disclosure {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+.experience-disclosure > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.1rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+
+.experience-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-disclosure > summary::after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.1rem) rotate(45deg);
+}
+
+.experience-disclosure > summary:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.experience-disclosure > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.experience-disclosure .details-hide,
+.experience-disclosure[open] .details-show {
+  display: none;
+}
+
+.experience-disclosure[open] .details-hide {
+  display: inline;
+}
+
+.experience-disclosure[open] > summary::after {
+  transform: translateY(0.1rem) rotate(225deg);
+}
+
+.experience-expanded {
+  display: flow-root;
+  max-width: 65ch;
+  margin-top: 0.85rem;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 2px solid var(--line);
+  overflow-wrap: break-word;
+}
+
+.experience-expanded > p:first-child {
+  margin-top: 0;
+}
+
+.experience-details {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.experience-details li + li {
+  margin-top: 0.65rem;
 }
 
 .experience-entry.is-current h3::after {

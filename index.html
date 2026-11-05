@@ -97,15 +97,24 @@
         <ol class="research-list">
           <li>
             <span class="research-number">01</span>
-            <div><h3>Safer robotic grasping</h3><p>Using three-way decisions to defer unreliable actions under ambiguity, occlusion, and human-hand intrusion.</p></div>
+            <div>
+              <h3>Pre-training for embodied intelligence</h3>
+              <p>I focus on the data pipelines that support large-scale pre-training of embodied foundation models and world action models. My work brings together heterogeneous robot datasets through unified data access, quality assessment, cleaning, temporal segmentation, and model-assisted annotation. I am interested in how data quality and diversity shape useful representations for robot learning.</p>
+            </div>
           </li>
           <li>
             <span class="research-number">02</span>
-            <div><h3>Contact-rich manipulation</h3><p>Combining vision-based tactile sensing with single-arm and bimanual control for contact-rich tasks.</p></div>
+            <div>
+              <h3>Vision-Language-Action models</h3>
+              <p>I study how Vision-Language-Action (VLA) models turn visual observations and language instructions into robot actions. My work spans policy training, full-parameter fine-tuning, benchmark evaluation, and real-robot deployment for single-arm and bimanual manipulation. I also explore three-way decision-making to defer unsafe or unreliable actions under ambiguous instructions and partial observations.</p>
+            </div>
           </li>
           <li>
             <span class="research-number">03</span>
-            <div><h3>Tactile-guided VLA</h3><p>Connecting frozen VLA backbones with tactile-conditioned decoders for high-frequency action correction.</p></div>
+            <div>
+              <h3>Tactile sensing and feedback</h3>
+              <p>I explore how tactile feedback can complement vision in contact-rich manipulation. My work combines temporal tactile representations with flow-based action decoders to revise frozen VLA policies at high frequency. Through TacFRS, I investigate how touch can support 30 Hz action correction between slower VLA updates, helping robots adapt their actions as contact conditions change.</p>
+            </div>
           </li>
         </ol>
       </div>
@@ -171,6 +180,20 @@
               </div>
               <h3><a href="https://cs.pku.edu.cn/">Research Intern · Peking University</a></h3>
               <p>Advisor: Prof. <a href="https://cs.pku.edu.cn/info/1089/1747.htm">Shanghang Zhang</a></p>
+              <details class="experience-disclosure">
+                <summary>
+                  <span class="details-show">View details</span>
+                  <span class="details-hide">Hide details</span>
+                </summary>
+                <div class="experience-expanded">
+                  <p><strong>Research focus:</strong> Embodied foundation models and world action models.</p>
+                  <ul class="experience-details">
+                    <li>Build unified data adapters and trajectory indexing for DROID, AgiBot World Alpha, and RoboMIND, integrating 24 action quality checks and 7 video quality checks.</li>
+                    <li>Develop data cleaning, model-assisted annotation, deduplication, and reviewed export workflows; deploy NVIDIA FLORA's TempSeg, Captioner, and Rewarder tools.</li>
+                    <li>Set up π0.5 and FastWAM training and evaluation pipelines, perform full-parameter fine-tuning, and evaluate both models across all <a href="https://dexjoco.github.io/">DexJoCo</a> tasks.</li>
+                  </ul>
+                </div>
+              </details>
             </article>
             <article class="experience-entry">
               <div class="entry-meta">
@@ -179,6 +202,20 @@
               </div>
               <h3><a href="https://www.sudo.ai">Research Intern · Sudo Robotics</a></h3>
               <p>Advisor: <a href="https://callmeray.github.io/homepage/">Prof. Rui Chen</a></p>
+              <details class="experience-disclosure">
+                <summary>
+                  <span class="details-show">View details</span>
+                  <span class="details-hide">Hide details</span>
+                </summary>
+                <div class="experience-expanded">
+                  <p><strong>Research focus:</strong> High-frequency tactile action revision with TacFRS.</p>
+                  <ul class="experience-details">
+                    <li>Co-developed TacFRS, a plug-in framework using finite-step flow reversal to revise actions from frozen flow-based VLA models.</li>
+                    <li>Built a tactile-conditioned flow decoder with temporal tactile encoding and proprioception for <strong>30 Hz</strong> action correction, using tactile-gated supervision to preserve base-policy behavior.</li>
+                    <li>Raised average task success from <strong>28.75% to 41.25%</strong> for SmolVLA and from <strong>53.75% to 67.50%</strong> for π0.5 across four real-world single-arm and bimanual tasks.</li>
+                  </ul>
+                </div>
+              </details>
             </article>
             <article class="experience-entry">
               <div class="entry-meta"><time datetime="2026-03">Mar – Jun 2026</time>
@@ -186,6 +223,20 @@
               </div>
               <h3><a href="https://callmeray.github.io/Mani_ViTac_Challenge_2026_page/">Student Organizer · ManiSkill-ViTac Challenge 2026</a></h3>
               <p>CVPR 2026 Embodied AI Workshop</p>
+              <details class="experience-disclosure">
+                <summary>
+                  <span class="details-show">View details</span>
+                  <span class="details-hide">Hide details</span>
+                </summary>
+                <div class="experience-expanded">
+                  <p><strong>Research focus:</strong> Language-guided bimanual vision-tactile manipulation.</p>
+                  <ul class="experience-details">
+                    <li>Built an end-to-end VLA pipeline around UMI-based data collection, covering hardware, data processing, model training, and real-robot deployment.</li>
+                    <li>Integrated AnyTouch tactile representations into a π0.5-based VLA with modality-weighted training to establish the competition baseline.</li>
+                    <li>Designed two long-horizon, contact-rich tasks, co-organized the challenge, and contributed to its technical report.</li>
+                  </ul>
+                </div>
+              </details>
             </article>
             <article class="experience-entry">
               <div class="entry-meta"><time datetime="2026-01">Jan – May 2026</time>
@@ -193,6 +244,20 @@
               </div>
               <h3>Research Assistant · Vision-Language-Action Model</h3>
               <p>Advisor: <a href="https://scholar.google.com/citations?user=TeoBMbgAAAAJ&amp;hl=en&amp;oi=ao">Prof. Xinheng Wang</a></p>
+              <details class="experience-disclosure">
+                <summary>
+                  <span class="details-show">View details</span>
+                  <span class="details-hide">Hide details</span>
+                </summary>
+                <div class="experience-expanded">
+                  <p><strong>Research focus:</strong> Three-way decision-making for safer robotic grasping.</p>
+                  <ul class="experience-details">
+                    <li>Co-developed 3WD-VLA to defer unsafe or unreliable actions under ambiguous commands, target absence, human-hand intrusion, occlusion, and stacking.</li>
+                    <li>Built a teleoperation data-collection pipeline for the SO-100 arm and trained ACT, π0.5, and SmolVLA policies.</li>
+                    <li>Improved performance by <strong>27.5 percentage points</strong> over a matched SmolVLA baseline without three-way decisions.</li>
+                  </ul>
+                </div>
+              </details>
             </article>
           </div>
         </div>
